@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+   
+    {% block title %}
+    read news  
+    {% endblock title %}
+
+    {% block content %}
+        <!--i can use any of the two post or object-->
+            <div class="post_entry"><h2>{{ object.title}}</h2><p>
+                {{object.body}}</p>
+        </div>
+
+      
+    {% endblock content %}

@@ -1,0 +1,20 @@
+ {% extends 'base.html' %}
+
+
+    {% block title %}
+    Django blocktrue  
+    {% endblock title %}
+
+
+    {% block content %}
+
+    {% for post in post_list %} <!--the post_list comes from ListView,Templateview,Detailview and represent all the object in model post-->
+
+    <div class="post-entry"><h2><a href="{%url 'post_detail' post.pk%}">{{post.title}}</a></h2><p>
+        {{post.body}}
+    </p></div>
+
+    {% endfor%}
+
+    {% endblock content %}
+
