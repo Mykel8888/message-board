@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        <h1>
+            New Post
+        </h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}} <!--its render specify field withing paragraph <p> i.e each every field will be on a paragraph-->
+            <input type="submit", value="Save">
+        </form>
+    {% endblock content %}

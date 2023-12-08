@@ -10,5 +10,8 @@
                 {{object.body}}</p>
         </div>
 
+        <button type="button"><a href="{%url "post_edit" object.pk %}">Edit Blog Post</a></button>
+        
+       <p> <button type="button"><a href="{%url "post_delete" object.pk %}">Delete Blog Post</a></button> </p>
       
     {% endblock content %}

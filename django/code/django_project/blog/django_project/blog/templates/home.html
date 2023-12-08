@@ -10,7 +10,8 @@
 
     {% for post in post_list %} <!--the post_list comes from ListView,Templateview,Detailview and represent all the object in model post-->
 
-    <div class="post-entry"><h2><a href="{%url 'post_detail' post.pk%}">{{post.title}}</a></h2><p>
+    <div class="post-entry"><h2><a href="{%url 'post_detail' post.pk%}">{{post.title}} </a>,
+        <a href="{% url "post_edit" post.pk %}"><button>Edit</a></button></h2><p>
         {{post.body}}
     </p></div>
 

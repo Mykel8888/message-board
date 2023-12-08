@@ -10,7 +10,7 @@ class Post(models.Model):
     body = models.TextField()
 
     def __str__(self):
-        return self.title
-    
+        return self.title #display the data title in admin page
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'pk': self.pk})
+    #this is where our editing will be land
